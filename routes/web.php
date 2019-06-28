@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Detect max size for the database tables fields
+Route::prefix('max-size-detect')->group(function () {
+    // Crops
+    Route::get('crops', 'MaxSizeDetectController@crops');
+    Route::get('crops/categories', 'MaxSizeDetectController@cropsCategories');
+    // ...
+});
