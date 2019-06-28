@@ -22,6 +22,9 @@ class CreateCropsTable extends Migration
             $table->string('translit', 16)->comment('for SEO and marketing');
             $table->enum('available', ['yes', 'no'])->default('no')->comment('display on the site');
 
+            // Indexes.
+            $table->index('category_id');
+
             $table->timestamps();
         });
     }

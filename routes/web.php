@@ -18,9 +18,12 @@ Route::get('/', function () {
 // Detect max size for the database tables fields
 Route::prefix('max-size-detect')->group(function () {
     // Crops
-    Route::get('crops', 'MaxSizeDetectController@crops');
     Route::get('crops/categories', 'MaxSizeDetectController@cropsCategories');
+    Route::get('crops', 'MaxSizeDetectController@crops');
     // Payment
     Route::get('payment/forms', 'MaxSizeDetectController@paymentForms');
     Route::get('payment/methods', 'MaxSizeDetectController@paymentMethods');
+    // Incoterms
+    Route::get('incoterms/groups', 'MaxSizeDetectController@incotermsGroups');
+    Route::get('incoterms', 'MaxSizeDetectController@incoterms');
 });

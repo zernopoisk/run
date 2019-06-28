@@ -7,6 +7,32 @@ use Illuminate\Http\Request;
 class MaxSizeDetectController extends Controller
 {
     /**
+     * Incoterms-2010
+     */
+    public function incoterms()
+    {
+        $this->_displayMaxValues(
+            $this->_calculateMaxValues(
+                config('json.incoterms.incoterms'),
+                ['group','alias','abbr','term_en','specification','type_of_transport','available']
+            ), "Incoterms-2010"
+        );
+    }
+
+    /**
+     * Incoterms-2010 Groups
+     */
+    public function incotermsGroups()
+    {
+        $this->_displayMaxValues(
+            $this->_calculateMaxValues(
+                config('json.incoterms.groups'),
+                ['alias','name','term_en','specification','available']
+            ), "Incoterms-2010 Groups"
+        );
+    }
+
+    /**
      * Payment Methods
      */
     public function paymentMethods()
