@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CropCategory extends Model
+class PaymentMethod extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'crops_categories';
+    protected $table = 'payment_methods';
 
     /**
      * The attributes that are mass assignable.
@@ -20,14 +20,7 @@ class CropCategory extends Model
      */
     protected $fillable = [
         'alias', 'name', 'translit',
+        'available'
     ];
-
-    /**
-     * Get the crop items assigned for the category.
-     */
-    public function crops()
-    {
-        return $this->hasMany('App\Crop', 'category_id', 'id');
-    }
     
 }

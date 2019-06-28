@@ -20,5 +20,7 @@ Route::prefix('max-size-detect')->group(function () {
     // Crops
     Route::get('crops', 'MaxSizeDetectController@crops');
     Route::get('crops/categories', 'MaxSizeDetectController@cropsCategories');
-    // ...
+    // Payment
+    Route::get('payment/forms', 'MaxSizeDetectController@paymentForms');
+    Route::get('payment/methods', 'MaxSizeDetectController@paymentMethods');
 });

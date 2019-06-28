@@ -7,6 +7,32 @@ use Illuminate\Http\Request;
 class MaxSizeDetectController extends Controller
 {
     /**
+     * Payment Methods
+     */
+    public function paymentMethods()
+    {
+        $this->_displayMaxValues(
+            $this->_calculateMaxValues(
+                config('json.payment.methods'),
+                ['alias','name','translit']
+            ), "Payment Methods"
+        );
+    }
+
+    /**
+     * Payment Forms
+     */
+    public function paymentForms()
+    {
+        $this->_displayMaxValues(
+            $this->_calculateMaxValues(
+                config('json.payment.forms'),
+                ['alias','name','translit']
+            ), "Payment Forms"
+        );
+    }
+
+    /**
      * Crops
      */
     public function crops()
@@ -20,7 +46,7 @@ class MaxSizeDetectController extends Controller
     }
 
     /**
-     * Crops categories
+     * Crops Categories
      */
     public function cropsCategories()
     {

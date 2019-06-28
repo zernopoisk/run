@@ -7,13 +7,12 @@ class CropsTablesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     * Crops Categories & Crops assigned.
      *
      * @return void
      */
     public function run()
     {
-        // Crops Categories & Crops
-
         $cereals = App\CropCategory::create(["alias"=>"cereals","name"=>"зерновые","translit"=>"zernovyye"]);
         $cereals->crops()->createMany([
             ["alias"=>"barley","name"=>"ячмень","translit"=>"yachmen","available"=>"yes"],
@@ -24,7 +23,6 @@ class CropsTablesSeeder extends Seeder
             ["alias"=>"oats","name"=>"овес","translit"=>"oves","available"=>"yes"],
             ["alias"=>"millet","name"=>"просо","translit"=>"proso","available"=>"yes"],
         ]);
-
     
         $oilseeds = App\CropCategory::create(["alias"=>"oilseeds","name"=>"масличные","translit"=>"maslichnyye"]);
         $oilseeds->crops()->createMany([
@@ -32,13 +30,10 @@ class CropsTablesSeeder extends Seeder
             ["alias"=>"rape","name"=>"рапс","translit"=>"raps","available"=>"yes"],
         ]);
 
-    
         $legumes = App\CropCategory::create(["alias"=>"legumes","name"=>"бобовые","translit"=>"bobovyye"]);
         $legumes->crops()->createMany([
             ["alias"=>"soybean","name"=>"соя","translit"=>"soya","available"=>"yes"],
             ["alias"=>"peas","name"=>"горох","translit"=>"gorokh","available"=>"yes"],
         ]);
-
-
     }
 }
