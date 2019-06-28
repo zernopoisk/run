@@ -7,6 +7,45 @@ use Illuminate\Http\Request;
 class MaxSizeDetectController extends Controller
 {
     /**
+     * Location Regions
+     */
+    public function locationRegions()
+    {
+        $this->_displayMaxValues(
+            $this->_calculateMaxValues(
+                config('json.location.regions'),
+                ['alias','name','translit','type']
+            ), "Location Regions"
+        );
+    }
+    
+    /**
+     * Location Centers
+     */
+    public function locationCenters()
+    {
+        $this->_displayMaxValues(
+            $this->_calculateMaxValues(
+                config('json.location.centers'),
+                ['alias','name','translit']
+            ), "Location Centers"
+        );
+    }
+
+    /**
+     * Location Districts
+     */
+    public function locationDistricts()
+    {
+        $this->_displayMaxValues(
+            $this->_calculateMaxValues(
+                config('json.location.districts'),
+                ['alias','name','region','translit']
+            ), "Location Districts"
+        );
+    }
+
+    /**
      * Incoterms-2010
      */
     public function incoterms()

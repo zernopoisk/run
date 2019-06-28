@@ -26,4 +26,8 @@ Route::prefix('max-size-detect')->group(function () {
     // Incoterms
     Route::get('incoterms/groups', 'MaxSizeDetectController@incotermsGroups');
     Route::get('incoterms', 'MaxSizeDetectController@incoterms');
+    // Location
+    Route::get('location/regions', 'MaxSizeDetectController@locationRegions');
+    Route::get('location/centers', 'MaxSizeDetectController@locationCenters');
+    Route::get('location/districts', 'MaxSizeDetectController@locationDistricts');
 });
