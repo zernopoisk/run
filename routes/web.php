@@ -30,4 +30,6 @@ Route::prefix('max-size-detect')->group(function () {
     Route::get('location/regions', 'MaxSizeDetectController@locationRegions');
     Route::get('location/centers', 'MaxSizeDetectController@locationCenters');
     Route::get('location/districts', 'MaxSizeDetectController@locationDistricts');
+    // Seller
+    Route::get('seller/types', 'MaxSizeDetectController@sellerTypes');
 });

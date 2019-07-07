@@ -7,6 +7,19 @@ use Illuminate\Http\Request;
 class MaxSizeDetectController extends Controller
 {
     /**
+     * Seller Types
+     */
+    public function sellerTypes()
+    {
+        $this->_displayMaxValues(
+            $this->_calculateMaxValues(
+                config('json.seller.types'),
+                ['alias','name','translit']
+            ), "Seller Types"
+        );
+    }
+
+    /**
      * Location Regions
      */
     public function locationRegions()
