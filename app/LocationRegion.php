@@ -22,4 +22,12 @@ class LocationRegion extends Model
         'alias','name','translit',
         'type','available',
     ];
+
+    /**
+     * Get the administrative center associated with the region.
+     */
+    public function adminCenter()
+    {
+        return $this->hasOne('App\LocationRegionCenter', 'region_id');
+    }
 }

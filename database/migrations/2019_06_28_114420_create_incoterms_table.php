@@ -24,10 +24,10 @@ class CreateIncotermsTable extends Migration
             $table->enum('type_of_transport', ['any','water'])->default('any')->comment('to highlight types of incoterms transport');
             $table->enum('available', ['yes', 'no'])->default('no')->comment('display on the site');
 
+            $table->timestamps();
+
             // Indexes.
             $table->index('group_id');
-
-            $table->timestamps();
         });
     }
 
