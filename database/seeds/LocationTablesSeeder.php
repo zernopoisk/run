@@ -47,6 +47,35 @@ class LocationTablesSeeder extends Seeder
     {
         $Vinnitskaya = App\LocationRegion::create(["alias"=>"Vinnytsia","name"=>"Винницкая","translit"=>"Vinnitskaya","type"=>"region","available"=>"yes"]);
         $Vinnitskaya->adminCenter()->create(["alias"=>"Vinnitsa","name"=>"Винница","translit"=>"Vinnitsa"]);
+        $Vinnitskaya->districts()->createMany([
+            ["alias"=>"Barsky","name"=>"Барский","translit"=>"Barskiy","available"=>"yes"],
+            ["alias"=>"Bershad","name"=>"Бершадский","translit"=>"Bershadskyy","available"=>"yes"],
+            ["alias"=>"Vinnitsa","name"=>"Винницкий","translit"=>"Vinnitskiy","available"=>"yes"],
+            ["alias"=>"Gaysinsky","name"=>"Гайсинский","translit"=>"Gaysinskiy","available"=>"yes"],
+            ["alias"=>"Zhmerinsky","name"=>"Жмеринский","translit"=>"Zhmerinskiy","available"=>"yes"],
+            ["alias"=>"Ilintsi","name"=>"Ильинецкий","translit"=>"Ilinetskiy","available"=>"yes"],
+            ["alias"=>"Kalinovsky","name"=>"Калиновский","translit"=>"Kalinovskiy","available"=>"yes"],
+            ["alias"=>"Kazatinsky","name"=>"Казатинский","translit"=>"Kazatynskyy","available"=>"yes"],
+            ["alias"=>"Kryzhopolsky","name"=>"Крыжопольский","translit"=>"Kryzhopolskiy","available"=>"yes"],
+            ["alias"=>"Lipovets","name"=>"Липовецкий","translit"=>"Lypovetskyy","available"=>"yes"],
+            ["alias"=>"Litinsky","name"=>"Литинский","translit"=>"Litinskiy","available"=>"yes"],
+            ["alias"=>"Mogilyov-Podolsky","name"=>"Могилёв-Подольский","translit"=>"Mogilov-Podolskiy","available"=>"yes"],
+            ["alias"=>"Murovanokurilovets","name"=>"Мурованокуриловецкий","translit"=>"Murovanokurylovetskyy","available"=>"yes"],
+            ["alias"=>"Nemirovsky","name"=>"Немировский","translit"=>"Nemirovskiy","available"=>"yes"],
+            ["alias"=>"Oratov","name"=>"Оратовский","translit"=>"Oratovskiy","available"=>"yes"],
+            ["alias"=>"Peschansky","name"=>"Песчанский","translit"=>"Peschanskiy","available"=>"yes"],
+            ["alias"=>"Pogrebishchensky","name"=>"Погребищенский","translit"=>"Pogrebishchenskiy","available"=>"yes"],
+            ["alias"=>"Teplicki","name"=>"Тепликский","translit"=>"Teplykskyy","available"=>"yes"],
+            ["alias"=>"Tomashpol","name"=>"Томашпольский","translit"=>"Tomashpolskyy","available"=>"yes"],
+            ["alias"=>"Trostyanets","name"=>"Тростянецкий","translit"=>"Trostyanetskyy","available"=>"yes"],
+            ["alias"=>"Tulchinsky","name"=>"Тульчинский","translit"=>"Tulchynskyy","available"=>"yes"],
+            ["alias"=>"Tyvrovsky","name"=>"Тывровский","translit"=>"Tyvrovskyy","available"=>"yes"],
+            ["alias"=>"Khmelnitsky","name"=>"Хмельницкий","translit"=>"Khmelnytskyy","available"=>"yes"],
+            ["alias"=>"Chernivetsky","name"=>"Черневецкий","translit"=>"Chernevetskyy","available"=>"yes"],
+            ["alias"=>"Chechelnitsky","name"=>"Чечельницкий","translit"=>"Chechelnytskyy","available"=>"yes"],
+            ["alias"=>"Shargorod","name"=>"Шаргородский","translit"=>"Sharhorodskyy","available"=>"yes"],
+            ["alias"=>"Yampolsky","name"=>"Ямпольский","translit"=>"Yampolskiy","available"=>"yes"],
+        ]);
     }
 
     /**

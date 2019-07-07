@@ -37,10 +37,19 @@ class MaxSizeDetectController extends Controller
      */
     public function locationDistricts()
     {
+        $allRegionsDistricts = [];
+
+        foreach (config('json.location.districts') as $region => $districts) {
+            foreach ($districts as $name => $district) {
+                // a district with the same name may be in several regions
+                $allRegionsDistricts["{$region}-{$name}"] = $district;
+            }
+        }
+
         $this->_displayMaxValues(
             $this->_calculateMaxValues(
-                config('json.location.districts'),
-                ['alias','name','region','translit']
+                $allRegionsDistricts,
+                ['alias','name','translit']
             ), "Location Districts"
         );
     }
