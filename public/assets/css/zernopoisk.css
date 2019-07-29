@@ -1,0 +1,73 @@
+/* common */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
+}
+
+.offer-item {
+    border: 1px solid #bfbfbf;
+    font-size: 1rem;
+}
+    .offer-item .amount {
+        padding-right: 3px;
+    }
+    .offer-item .price-uah {
+        color: #0066ff;
+    }
+    .offer-item .price-usd {
+        color: #009900;
+    }
+    .offer-item .price-contract {
+        /**/
+    }
+    
+
+.offer-item.paid {
+    border: 1px solid orange;
+    background-color:#ffffb3;
+}
+
+/* home */
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #bfbfbf;
+}
+    .blog-header-logo {
+        font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.1rem;
+    }
+        .blog-header-logo:hover {
+            text-decoration: none;
+        }
+
+.jumbotron {
+    background: url(/assets/img/zernopoisk-header.svg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #dde0f4;
+    border-top: 1px solid #dde0f4;
+    margin: 0 -2px;
+}
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    @media (min-width: 768px) {
+        .display-4 {
+            font-size: 3rem;
+        }
+    }
